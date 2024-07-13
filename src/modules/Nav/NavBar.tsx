@@ -41,7 +41,9 @@ const NavBar = () => {
       </Tabs>
       <ModeToggle />
       <LetterPullup words="Hello World" />
-      <Registration />
+
+
+      
     </>
   );
 };
