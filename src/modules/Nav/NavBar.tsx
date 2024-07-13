@@ -12,6 +12,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ModeToggle } from "@/components/ui/ModeToggle";
 
 import Image from "next/image";
+import LetterPullup from "@/components/magicui/letter-pullup";
+import { Registration } from "../Registration/Registration";
 
 const NavBar = () => {
   return (
@@ -38,6 +40,8 @@ const NavBar = () => {
         <TabsContent value="password">Change your password here.</TabsContent>
       </Tabs>
       <ModeToggle />
+      <LetterPullup words="Hello World" />
+      <Registration />
     </>
   );
 };
