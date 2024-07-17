@@ -18,7 +18,6 @@ import { Registration } from "../Registration/Registration";
 const NavBar = () => {
   return (
     <>
-      {" "}
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
