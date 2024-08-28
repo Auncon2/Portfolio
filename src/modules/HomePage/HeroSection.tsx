@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <div className="bg-gray-900 py-24 px-4 sm:px-6 lg:px-8 text-white">
+    <div className="bg-gray-900 py-24 px-4 sm:px-6 lg:px-8 text-white h-24">
       <div className="max-w-7xl mx-auto">
         <div className="md:flex md:items-center md:justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0">

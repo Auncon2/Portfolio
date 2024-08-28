@@ -7,15 +7,14 @@ import NavbarV2 from "../Nav/NavbarV2";
 
 const HeroSectionV2 = () => {
   return (
-    <div className="bg-gradient-to-br from-gray-800 via-black to-red-950 text-white h-full w-full  overflow-hidden   min-h-screen">
+    <div className="bg-gradient-to-br from-gray-800 via-black to-red-950 text-white w-full h-[800px] overflow-hidden relative">
       <NavbarV2 />
-      <div className="flex items-center justify-between p-[180px] pt-14">
-        <div>
+      <div className="flex items-center justify-evenly h-full">
+        <div className="uppercase">
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
             <div className="grid text-4xl md:text-9xl font-bold leading-tight">
               <p>Hi, I am Auncon</p>
               <span className="text-yellow-500">Software Developer</span>
-              {/* <span className="text-yellow-500">Developer</span> */}
             </div>
           </BoxReveal>
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
@@ -54,7 +53,7 @@ const HeroSectionV2 = () => {
             </span>
           </ShimmerButton>
         </div>
-        <Image src={"/bg/bg.png"} alt="sfds" width={600} height={900} />
+        <div className="bg-[url('/bg/bg1.jpg')] bg-cover bg-center w-[1000px] h-full"></div>
       </div>
     </div>
   );
