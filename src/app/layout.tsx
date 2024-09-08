@@ -4,7 +4,6 @@ import "./globals.css";
 import NavBar from "@/modules/Nav/NavBar";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,9 +25,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <NavBar /> */}
-     
-
           {children}
         </ThemeProvider>
       </body>

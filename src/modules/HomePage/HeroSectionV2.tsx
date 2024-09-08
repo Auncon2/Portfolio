@@ -4,19 +4,32 @@ import ShimmerButton from "@/components/magicui/shimmer-button";
 import Image from "next/image";
 import React from "react";
 import NavbarV2 from "../Nav/NavbarV2";
+import { useTheme } from "next-themes";
+import LetterPullup from "@/components/magicui/letter-pullup";
+import BlurIn from "@/components/magicui/blur-in";
+import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 
 const HeroSectionV2 = () => {
+  const { theme, setTheme } = useTheme();
+  console.log("theme", theme);
   return (
-    <div className="bg-gradient-to-br from-gray-800 via-black to-red-950 text-white w-full h-[800px] overflow-hidden relative">
+    <div className="bg-transparent dark:bg-gradient-to-br from-gray-800 via-black to-red-950 text-white w-full h-[800px] overflow-hidden relative">
       <NavbarV2 />
-      <div className="flex items-center justify-evenly h-full">
-        <div className="uppercase">
-          <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+      <div className="flex items-center justify-around h-full pr-6">
+        <div className="uppercase px-7">
+          <LetterPullup words="Hi, I am Auncon" />
+          <BlurIn
+            word="Software Developer"
+            className="text-yellow-500 grid text-4xl md:text-9xl font-bold leading-tight mt-6"
+          />
+
+          {/* <BoxReveal boxColor={"#5046e6"} duration={0.5}>
             <div className="grid text-4xl md:text-9xl font-bold leading-tight">
-              <p>Hi, I am Auncon</p>
+              <p className={theme === "light" ?"text-black" :""}>Hi, I am Auncon</p>
+             
               <span className="text-yellow-500">Software Developer</span>
             </div>
-          </BoxReveal>
+          </BoxReveal> */}
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
             <h2 className="mt-[.5rem] text-[1rem]">
               UI library for
@@ -53,7 +66,14 @@ const HeroSectionV2 = () => {
             </span>
           </ShimmerButton>
         </div>
-        <div className="bg-[url('/bg/bg1.jpg')] bg-cover bg-center w-[1000px] h-full"></div>
+        <NeonGradientCard className=" w-[850px] h-[650px] items-center justify-center text-center ">
+          {/* <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+            Neon Gradient Card
+          </span> */}
+          <span></span>
+        </NeonGradientCard>
+
+        {/* <div className="bg-[url('/bg/bg1.jpg')] bg-cover bg-center w-[900px] h-[650px] mr-7"></div> */}
       </div>
     </div>
   );
