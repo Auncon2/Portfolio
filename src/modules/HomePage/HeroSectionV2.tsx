@@ -15,8 +15,8 @@ const HeroSectionV2 = () => {
   return (
     <div className="bg-transparent dark:bg-gradient-to-br from-gray-800 via-black to-red-950 text-white w-full h-[800px] overflow-hidden relative">
       <NavbarV2 />
-      <div className="flex items-center justify-around h-full pr-6">
-        <div className="uppercase px-7">
+      <div className="flex items-center justify-around gap-12 h-full px-[150px]">
+        <div className="uppercase ">
           <LetterPullup words="Hi, I am Auncon" />
           <BlurIn
             word="Software Developer"
@@ -66,7 +66,7 @@ const HeroSectionV2 = () => {
             </span>
           </ShimmerButton>
         </div>
-        <NeonGradientCard className=" w-[850px] h-[650px] items-center justify-center text-center ">
+        <NeonGradientCard className=" w-[750px] h-[600px] items-center justify-center text-center ">
           {/* <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
             Neon Gradient Card
           </span> */}

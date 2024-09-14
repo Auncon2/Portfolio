@@ -73,8 +73,10 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
   borderSize = 2,
   borderRadius = 20,
   neonColors = {
-    firstColor: "#ff00aa",
-    secondColor: "#00FFF1",
+    // firstColor: "#ff00aa",
+    // secondColor: "#00FFF1",
+    firstColor: "#f1f65b",
+    secondColor: "#b026ff",
   },
   ...props
 }) => {
@@ -141,7 +143,6 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
           "after:animate-backgroundPositionSpin",
           "dark:bg-neutral-900"
         )}
-  
       >
         {children}
       </div>
