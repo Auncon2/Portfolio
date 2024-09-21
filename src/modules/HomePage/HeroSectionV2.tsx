@@ -1,39 +1,60 @@
-import ShimmerButton from "@/components/magicui/shimmer-button";
-
 import React from "react";
 import NavbarV2 from "../Nav/NavbarV2";
 import { useTheme } from "next-themes";
 import LetterPullup from "@/components/magicui/letter-pullup";
-import BlurIn from "@/components/magicui/blur-in";
-import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
-import GradualSpacing from "@/components/magicui/gradual-spacing";
 
+import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
+
+import WordPullUp from "@/components/magicui/word-pull-up";
+import SocialMediaLinks from "./SocialMediaLinks";
+import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
+
+import { cn } from "@/lib/utils";
+import { FaFilePdf } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 const HeroSectionV2 = () => {
   const { theme, setTheme } = useTheme();
   console.log("theme", theme);
   return (
-    <div className="bg-transparent dark:bg-gradient-to-br from-gray-800 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
+    <div className="bg-transparent  dark:bg-gradient-to-br from-gray-800 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
       <NavbarV2 />
       <div className="flex items-center justify-around gap-12 h-full px-[150px]">
-        <div className="uppercase ">
+        <div className="uppercase -mb-7">
           <LetterPullup words="Hi, I am Auncon" />
-          <div className="flex justify-start">
+          <div className="flex justify-start mt-16 mb-11">
             <div>
-              <GradualSpacing
-                className="font-display text-start text-4xl font-bold mt-11 -ml-4 tracking-[-0.1em] text-purple-600  md:text-9xl md:leading-[5rem]"
-                text="Software"
+              <WordPullUp
+                className="text-4xl font-bold tracking-[-0.02em] text-purple-600 dark:text-white md:text-9xl md:leading-[5rem] -ml-7"
+                words="Software"
               />
-              <GradualSpacing
-                className="font-display text-left text-4xl font-bold tracking-[-0.1em] text-purple-700  md:text-9xl"
-                text="Developer"
+              <WordPullUp
+                className="text-4xl font-bold tracking-[-0.02em] text-purple-600 dark:text-white md:text-9xl md:leading-[5rem] mt-11"
+                words="Developer"
               />
             </div>
           </div>
-          <ShimmerButton className="shadow-2xl">
-            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-              View Portfolio
-            </span>
-          </ShimmerButton>
+
+          <SocialMediaLinks />
+          <div className="flex items-center justify-start mt-3">
+          <div className="z-10 ">
+            <AnimatedGradientText>
+              <Button className="flex items-center gap-2 px-6 py-7 text-lg font-semibold transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] text-transparent bg-clip-text hover:scale-105 hover:bg-opacity-90">
+                {/* <Image src="/bg/cv.png" alt="cd" width={40} height={50}/> */}
+                <FaFilePdf color="red" />
+                <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />
+                <span
+                  className={cn(
+                    "inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent uppercase"
+                  )}
+                >
+                  Download resume
+                </span>
+                {/* <FaFilePdf color="red" /> */}
+              </Button>
+            </AnimatedGradientText>
+          </div>
+          </div>
         </div>
         <NeonGradientCard className="w-[750px] h-[600px] items-center justify-center text-center ">
           {/* <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
