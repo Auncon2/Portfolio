@@ -1,6 +1,7 @@
 import { ModeToggle } from "@/components/ui/ModeToggle";
 
 import Link from "next/link";
+import { DockDemo } from "./DockDemo";
 
 const NavbarV2 = () => {
   return (
@@ -11,6 +12,28 @@ const NavbarV2 = () => {
       >
         Portfolio
       </Link>
+      {/* <div className="flex items-center justify-center gap-4">
+        {" "}
+        <Link
+          href={"/"}
+          className="text-black dark:text-white text-left text-xl font-extrabold"
+        >
+          Portfolio
+        </Link>
+        <Link
+          href={"/"}
+          className="text-black dark:text-white text-left text-xl font-extrabold"
+        >
+          Portfolio
+        </Link>
+        <Link
+          href={"/"}
+          className="text-black dark:text-white text-left text-xl font-extrabold"
+        >
+          Portfolio
+        </Link>
+      </div> */}
+<DockDemo/>
       <ModeToggle />
     </div>
   );

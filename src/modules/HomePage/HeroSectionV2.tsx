@@ -13,47 +13,50 @@ import { cn } from "@/lib/utils";
 import { FaFilePdf } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 const HeroSectionV2 = () => {
   const { theme, setTheme } = useTheme();
   console.log("theme", theme);
   return (
-    <div className="bg-transparent  dark:bg-gradient-to-br from-gray-800 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
+    <div className="bg-slate-100 dark:bg-gradient-to-br from-gray-800 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
       <NavbarV2 />
       <div className="flex items-center justify-around gap-12 h-full px-[150px]">
-        <div className="uppercase -mb-7">
-          <LetterPullup words="Hi, I am Auncon" />
-          <div className="flex justify-start mt-16 mb-11">
+        <div className="-mb-7">
+          <LetterPullup className="uppercase" words="Hi, I am Auncon" />
+          <div className="flex justify-start mt-16 mb-11 uppercase">
             <div>
               <WordPullUp
-                className="text-4xl font-bold tracking-[-0.02em] text-purple-600 dark:text-white md:text-9xl md:leading-[5rem] -ml-7"
+                className="text-4xl font-bold tracking-[-0.02em] text-purple-600  md:text-9xl md:leading-[5rem] -ml-7"
                 words="Software"
               />
               <WordPullUp
-                className="text-4xl font-bold tracking-[-0.02em] text-purple-600 dark:text-white md:text-9xl md:leading-[5rem] mt-11"
+                className="text-4xl font-bold tracking-[-0.02em] text-purple-600  md:text-9xl md:leading-[5rem] mt-11"
                 words="Developer"
               />
             </div>
           </div>
 
           <SocialMediaLinks />
-          <div className="flex items-center justify-start mt-3">
-          <div className="z-10 ">
-            <AnimatedGradientText>
-              <Button className="flex items-center gap-2 px-6 py-7 text-lg font-semibold transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] text-transparent bg-clip-text hover:scale-105 hover:bg-opacity-90">
-                {/* <Image src="/bg/cv.png" alt="cd" width={40} height={50}/> */}
-                <FaFilePdf color="red" />
-                <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />
-                <span
-                  className={cn(
-                    "inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent uppercase"
-                  )}
-                >
-                  Download resume
-                </span>
-                {/* <FaFilePdf color="red" /> */}
-              </Button>
-            </AnimatedGradientText>
-          </div>
+        
+          <div className="flex items-center justify-start mt-6">
+          <RainbowButton >Download resume</RainbowButton>
+            {/* <div className="z-10 ">
+              <AnimatedGradientText>
+                <Button className="flex items-center gap-2 px-6 py-7 text-lg font-semibold transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] text-transparent bg-clip-text hover:scale-105 hover:bg-opacity-90">
+                 
+                  <FaFilePdf color="red" />
+                  <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />
+                  <span
+                    className={cn(
+                      "inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent uppercase"
+                    )}
+                  >
+                    Download resume
+                  </span>
+             
+                </Button>
+              </AnimatedGradientText>
+            </div> */}
           </div>
         </div>
         <NeonGradientCard className="w-[750px] h-[600px] items-center justify-center text-center ">
