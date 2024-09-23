@@ -5,35 +5,35 @@ import { DockDemo } from "./DockDemo";
 
 const NavbarV2 = () => {
   return (
-    <div className="flex justify-between p-4 bg-transparent absolute top-0 left-0 w-full">
+    <div className="flex justify-between p-4 bg-transparent absolute top-0 left-0 w-full backdrop-blur-xl">
       <Link
         href={"/"}
         className="text-black dark:text-white text-left text-xl font-extrabold"
       >
         Portfolio
       </Link>
-      {/* <div className="flex items-center justify-center gap-4">
+      <div className="flex items-center justify-center gap-4">
         {" "}
         <Link
           href={"/"}
           className="text-black dark:text-white text-left text-xl font-extrabold"
         >
-          Portfolio
+          Education
         </Link>
         <Link
           href={"/"}
           className="text-black dark:text-white text-left text-xl font-extrabold"
         >
-          Portfolio
+          Experience
         </Link>
         <Link
           href={"/"}
           className="text-black dark:text-white text-left text-xl font-extrabold"
         >
-          Portfolio
+          Projects
         </Link>
-      </div> */}
-<DockDemo/>
+      </div>
+     {/* <DockDemo/> */}
       <ModeToggle />
     </div>
   );

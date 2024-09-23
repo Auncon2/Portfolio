@@ -64,6 +64,15 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        orbit: {
+          '0%': { transform: 'rotate(0deg) translateX(8rem) rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg) translateX(8rem) rotate(-360deg)' },
+        },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
         rainbow: {
           "0%": { "background-position": "0%" },
           "100%": { "background-position": "200%" },
@@ -82,6 +91,11 @@ const config = {
         },
       },
       animation: {
+        'spin-slow': 'spin 20s linear infinite',
+        'orbit-slow': 'orbit 12s linear infinite',
+        'orbit-medium': 'orbit 8s linear infinite',
+        'orbit-fast': 'orbit 6s linear infinite',
+        gradient: "gradient 8s linear infinite",
         rainbow: "rainbow var(--speed, 2s) infinite linear",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

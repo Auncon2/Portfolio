@@ -18,12 +18,15 @@ const HeroSectionV2 = () => {
   const { theme, setTheme } = useTheme();
   console.log("theme", theme);
   return (
-    <div className="bg-slate-100 dark:bg-gradient-to-br from-gray-800 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
+    <div className="bg-slate-100 dark:bg-gradient-to-br from-gray-700 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
       <NavbarV2 />
-      <div className="flex items-center justify-around gap-12 h-full px-[150px]">
+      <div className="flex items-center justify-around gap-12 h-full px-[200px]">
         <div className="-mb-7">
-          <LetterPullup className="uppercase" words="Hi, I am Auncon" />
-          <div className="flex justify-start mt-16 mb-11 uppercase">
+          <LetterPullup
+            className="uppercase md:text-8xl"
+            words="Hi, I am Auncon"
+          />
+          <div className="flex justify-start mt-9 mb-11 uppercase">
             <div>
               <WordPullUp
                 className="text-4xl font-bold tracking-[-0.02em] text-purple-600  md:text-9xl md:leading-[5rem] -ml-7"
@@ -37,14 +40,13 @@ const HeroSectionV2 = () => {
           </div>
 
           <SocialMediaLinks />
-        
+
           <div className="flex items-center justify-start mt-6">
-          <RainbowButton >Download resume</RainbowButton>
-            {/* <div className="z-10 ">
+            {/* <RainbowButton >Download resume</RainbowButton> */}
+            <div className="z-10 ">
               <AnimatedGradientText>
                 <Button className="flex items-center gap-2 px-6 py-7 text-lg font-semibold transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] text-transparent bg-clip-text hover:scale-105 hover:bg-opacity-90">
-                 
-                  <FaFilePdf color="red" />
+                <Image src={"/bg/curriculum-vitae.png"} alt="cv" width={30} height={40} className="animate-pulse"/>
                   <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />
                   <span
                     className={cn(
@@ -53,20 +55,19 @@ const HeroSectionV2 = () => {
                   >
                     Download resume
                   </span>
-             
                 </Button>
               </AnimatedGradientText>
-            </div> */}
+            </div>
           </div>
         </div>
-        <NeonGradientCard className="w-[750px] h-[600px] items-center justify-center text-center ">
+        <NeonGradientCard className="w-[590px] h-[620px] items-center justify-center text-center ">
           {/* <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
             Neon Gradient Card
           </span> */}
-          <span></span>
+          <div className="bg-[url('/bg/bg4.jpg')] bg-cover bg-center w-full h-full rounded-2xl"></div>
         </NeonGradientCard>
 
-        {/* <div className="bg-[url('/bg/bg1.jpg')] bg-cover bg-center w-[900px] h-[650px] mr-7"></div> */}
+        {/* <div className="bg-[url('/bg/bg4.jpg')] bg-cover bg-center w-[900px] h-[650px] mr-7"></div> */}
       </div>
     </div>
   );
