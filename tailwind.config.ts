@@ -64,6 +64,11 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
         orbit: {
           '0%': { transform: 'rotate(0deg) translateX(8rem) rotate(0deg)' },
           '100%': { transform: 'rotate(360deg) translateX(8rem) rotate(-360deg)' },
@@ -91,6 +96,7 @@ const config = {
         },
       },
       animation: {
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         'spin-slow': 'spin 20s linear infinite',
         'orbit-slow': 'orbit 12s linear infinite',
         'orbit-medium': 'orbit 8s linear infinite',

@@ -18,8 +18,10 @@ const HeroSectionV2 = () => {
   const { theme, setTheme } = useTheme();
   console.log("theme", theme);
   return (
-    <div className="bg-slate-100 dark:bg-gradient-to-br from-gray-700 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
-      <NavbarV2 />
+    // <div className="bg-slate-100 dark:bg-gradient-to-br from-gray-700 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
+    <div className="bg-gradient-to-br from-transparent via-transparent to-purple-500 dark:bg-gradient-to-br from-gray-700 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
+ 
+    <NavbarV2 />
       <div className="flex items-center justify-around gap-12 h-full px-[200px]">
         <div className="-mb-7">
           <LetterPullup
@@ -61,13 +63,11 @@ const HeroSectionV2 = () => {
           </div>
         </div>
         <NeonGradientCard className="w-[590px] h-[620px] items-center justify-center text-center ">
-          {/* <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-6xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-            Neon Gradient Card
-          </span> */}
+        
           <div className="bg-[url('/bg/bg4.jpg')] bg-cover bg-center w-full h-full rounded-2xl"></div>
         </NeonGradientCard>
 
-        {/* <div className="bg-[url('/bg/bg4.jpg')] bg-cover bg-center w-[900px] h-[650px] mr-7"></div> */}
+        {/* <div className="bg-[url('/bg/bg4-removebg-preview.png')] bg-cover bg-center w-[600px] h-full -mb-[100px]"></div> */}
       </div>
     </div>
   );
