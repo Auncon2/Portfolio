@@ -9,7 +9,7 @@ export function RainbowButton({ children, ...props }: RainbowButtonProps) {
     <button
       className={cn(
         // Adjusted styles for a larger button
-        "h-14 px-20 py-9 text-lg font-medium inline-flex items-center justify-center rounded-3xl transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 relative group animate-rainbow cursor-pointer border-0 bg-[length:200%] text-primary-foreground [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.08*1rem)_solid_transparent]",
+        "h-14 px-11 py-8 text-lg font-medium inline-flex items-center justify-center rounded-2xl transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 relative group animate-rainbow cursor-pointer border-0 bg-[length:200%] text-primary-foreground [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.08*1rem)_solid_transparent]",
 
         // before styles
         "before:absolute before:bottom-[-20%] before:left-1/2 before:z-0 before:h-1/5 before:w-3/5 before:-translate-x-1/2 before:animate-rainbow before:bg-[linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))] before:bg-[length:200%] before:[filter:blur(calc(0.8*1rem))]",
@@ -22,7 +22,7 @@ export function RainbowButton({ children, ...props }: RainbowButtonProps) {
       )}
       {...props}
     >
-     <Image src={"/bg/curriculum-vitae.png"} alt="cv" width={40} height={50} className="mr-4"/> {children}
+     <Image src={"/bg/curriculum-vitae.png"} alt="cv" width={40} height={50} className="mr-4 animate-pulse"/> {children}
     </button>
   );
 }

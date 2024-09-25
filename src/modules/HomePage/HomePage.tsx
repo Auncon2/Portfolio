@@ -4,7 +4,7 @@ import AboutMe from './AboutMe'
 
 const HomePage = () => {
   return (
-    <div className='flex flex-col '><HeroSectionV2/><AboutMe/></div>
+    <div className='flex flex-col gap-11'><HeroSectionV2/><AboutMe/></div>
   )
 }
 
