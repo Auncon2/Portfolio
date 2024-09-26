@@ -2,6 +2,7 @@ import { ModeToggle } from "@/components/ui/ModeToggle";
 
 import Link from "next/link";
 import { DockDemo } from "./DockDemo";
+import ThemeSwitch from "@/components/common/ThemeSwitch";
 
 const NavbarV2 = () => {
   return (
@@ -35,6 +36,7 @@ const NavbarV2 = () => {
       </div>
       {/* <DockDemo/> */}
       <ModeToggle />
+      <ThemeSwitch/>
     </div>
   );
 };
