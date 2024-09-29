@@ -63,7 +63,7 @@ const HeroSectionV2 = () => {
             </div>
           </div>
         </div>
-        <NeonGradientCard className="w-[490px] h-[620px] items-center justify-center text-center ">
+        <NeonGradientCard className="w-[490px] h-[600px] items-center justify-center text-center ">
         
           <div className="bg-[url('/bg/bg4.jpg')] bg-cover bg-center bg-no-repeat w-full h-full rounded-2xl"></div>
         </NeonGradientCard>

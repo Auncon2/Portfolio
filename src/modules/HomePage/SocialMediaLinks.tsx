@@ -32,7 +32,7 @@ import { motion } from "framer-motion";
 const SocialMediaLinks = () => {
   // Animation variants
   const variants = {
-    hidden: (direction :any) => {
+    hidden: (direction: any) => {
       switch (direction) {
         case "left":
           return { opacity: 0, x: -50 };
@@ -59,7 +59,8 @@ const SocialMediaLinks = () => {
       text: (
         <a
           className="text-black dark:text-white"
-          href="https://www.linkedin.com/in/shazzad-auncon"
+          href="https://www.linkedin.com/in/shazzad-auncon-a2a385266/"
+          target="_blank"
         >
           LinkedIn
         </a>
@@ -78,7 +79,10 @@ const SocialMediaLinks = () => {
     {
       component: <HiOutlineMail color="blue" size={35} />,
       text: (
-        <a className="text-black dark:text-white" href="mailto:shazzadauncon@gmail.com">
+        <a
+          className="text-black dark:text-white"
+          href="mailto:shazzadauncon@gmail.com"
+        >
           shazzadauncon@gmail.com
         </a>
       ),
@@ -90,6 +94,7 @@ const SocialMediaLinks = () => {
         <a
           className="text-black dark:text-white"
           href="https://github.com/Auncon2?tab=repositories"
+          target="_blank"
         >
           GitHub
         </a>

@@ -6,7 +6,7 @@ import ThemeSwitch from "@/components/common/ThemeSwitch";
 
 const NavbarV2 = () => {
   return (
-    <div className="flex justify-between p-4 bg-transparent fixed top-0 left-0 w-full backdrop-blur-xl z-50">
+    <div className="flex justify-between p-4 px-14 bg-transparent fixed top-0 left-0 w-full backdrop-blur-xl z-50">
       <Link
         href={"/"}
         className="text-black dark:text-white text-left text-xl font-extrabold"
@@ -36,7 +36,9 @@ const NavbarV2 = () => {
       </div>
       {/* <DockDemo/> */}
       <ModeToggle />
-      <ThemeSwitch/>
+  
+  
+  
     </div>
   );
 };
