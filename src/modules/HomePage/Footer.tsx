@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media Links */}
-          <div className="flex space-x-6 mb-4 md:mb-0">
+          <div className="flex items-center space-x-6 mb-4 md:mb-0">
             <a
               href="https://github.com/Auncon2?tab=repositories"
               className="text-gray-400 hover:text-white"
@@ -39,7 +39,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/shazzad-auncon-a2a385266/"
               className="text-gray-400 hover:text-white"
               target="_blank"
               rel="noopener noreferrer"

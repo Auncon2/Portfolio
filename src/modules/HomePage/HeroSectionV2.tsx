@@ -17,10 +17,17 @@ import { RainbowButton } from "@/components/magicui/rainbow-button";
 const HeroSectionV2 = () => {
   const { theme, setTheme } = useTheme();
   console.log("theme", theme);
+  const handleDownload = () => {
+    // This will trigger the download of the PDF
+    const link = document.createElement('a');
+    link.href = '/bg/Abu_Shazzad_Auncon.pdf'; // Path to your PDF file in the public folder
+    link.download = 'Abu_Shazzad_Auncon.pdf'; // The filename after downloading
+    link.click();
+  };
   return (
-    // <div className="bg-slate-100 dark:bg-gradient-to-br from-gray-700 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
-    <div className=" dark:bg-gradient-to-br from-gray-700 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
- 
+  // <div className="bg-transparent text-white w-full h-[800px] overflow-hidden relative">
+ <div className=" dark:bg-gradient-to-br from-gray-700 via-black to-purple-950 text-white w-full h-[800px] overflow-hidden relative">
+
     <NavbarV2 />
       <div className="flex items-center justify-around gap-12 h-full px-[320px]">
         <div className="-mb-7">
@@ -35,8 +42,8 @@ const HeroSectionV2 = () => {
                 words="Software"
               />
               <WordPullUp
-                className="text-4xl font-bold tracking-[-0.02em] text-purple-600  md:text-9xl md:leading-[5rem] mt-11 font-sans"
-                words="Developer"
+                className="text-4xl font-bold tracking-[-0.02em] text-purple-600  md:text-[145px] md:leading-[5rem] mt-11 -ml-2 font-sans"
+                words="Engineer"
               />
             </div>
           </div>
@@ -45,10 +52,10 @@ const HeroSectionV2 = () => {
 
           <div className="flex items-center justify-start gap-5 mt-6">
             
-            <RainbowButton >Download resume</RainbowButton>
+            <RainbowButton  onClick={handleDownload}>Download resume</RainbowButton>
             <div className="z-10 ">
-              <AnimatedGradientText>
-                <Button className="flex items-center gap-2 w-[303px] px-11 py-7 text-lg font-semibold transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] text-transparent bg-clip-text hover:scale-105 hover:bg-opacity-90">
+              <AnimatedGradientText >
+                <Button className="flex items-center gap-2 w-[303px] px-11 py-7 text-lg font-semibold transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] text-transparent bg-clip-text hover:scale-105 hover:bg-opacity-90" onClick={handleDownload}>
                 
               
                   <span
@@ -56,7 +63,7 @@ const HeroSectionV2 = () => {
                       "inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent uppercase"
                     )}
                   >
-             Hire Me
+                   Hire Me
                   </span>
                 </Button>
               </AnimatedGradientText>

@@ -5,7 +5,7 @@ import { DockDemo } from "../Nav/DockDemo";
 const AboutMe = () => {
   return (
     <div className="flex justify-center items-stretch gap-11 py-6 bg-transparent ">
-      <div className="relative flex h-[500px] w-[400px] flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      <div className="relative flex h-[500px] w-[400px] flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl dark:shadow-[#9333e9]/50">
         <div className="relative bg-[url('/bg/IMG_2419.JPG')]  bg-cover bg-center w-full h-full"></div>
         <BorderBeam size={350} duration={12} delay={9} />
       </div>

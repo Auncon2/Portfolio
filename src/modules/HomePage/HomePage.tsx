@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col gap-11">
+    <div className="flex flex-col gap-11 bg-transparent">
       <HeroSectionV2 />
       <AboutMe />
       <MySkills/>
