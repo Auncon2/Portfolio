@@ -128,14 +128,14 @@ const SocialMediaLinks = () => {
           href="mailto:shazzadauncon@gmail.com"
           target="_blank"
         >
-          {" "}
+         
           <Image
           className="hover:scale-105 transition-transform duration-300 ease-in-out"
             src={"/bg/gmail.png"}
             alt="gmail.png"
             width={40}
             height={40}
-          />{" "}
+          />
         </a>
       ),
       text: (
@@ -155,7 +155,7 @@ const SocialMediaLinks = () => {
           href="https://github.com/Auncon2?tab=repositories"
           target="_blank"
         >
-          {" "}
+  
           <FaGithub className="text-black dark:text-white" size={30} />{" "}
         </a>
       ),
@@ -165,14 +165,14 @@ const SocialMediaLinks = () => {
           href="https://github.com/Auncon2?tab=repositories"
           target="_blank"
         >
-          {" "}
+      
           <Image
           className="hover:scale-105 transition-transform duration-300 ease-in-out"
             src={"/bg/github.png"}
             alt="github.png"
             width={40}
             height={40}
-          />{" "}
+          />
         </a>
       ),
       text: (

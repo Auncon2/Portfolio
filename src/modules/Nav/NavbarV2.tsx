@@ -1,8 +1,9 @@
+"use client"
 import { ModeToggle } from "@/components/ui/ModeToggle";
 
 import Link from "next/link";
-import { DockDemo } from "./DockDemo";
-import ThemeSwitch from "@/components/common/ThemeSwitch";
+
+
 
 const NavbarV2 = () => {
   return (
@@ -16,7 +17,7 @@ const NavbarV2 = () => {
       <div className="flex items-center justify-center gap-11">
         {" "}
         <Link
-          href={"/"}
+          href={"/education"}
           className="text-black dark:text-white text-left text-lg font-extrabold hover:scale-110 transition-transform duration-300 ease-in-out"
         >
           Education
@@ -34,11 +35,9 @@ const NavbarV2 = () => {
           Projects
         </Link>
       </div>
-      {/* <DockDemo/> */}
+
       <ModeToggle />
-  
-  
-  
+   
     </div>
   );
 };
