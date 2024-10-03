@@ -5,6 +5,8 @@ import MySkills from "./MySkills";
 import Footer from "./Footer";
 
 const HomePage = () => {
+
+
   return (
     <div className="flex flex-col gap-11 bg-transparent">
       <HeroSectionV2 />

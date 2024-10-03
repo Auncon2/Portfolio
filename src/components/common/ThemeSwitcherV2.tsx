@@ -25,7 +25,7 @@ const ThemeSwitcherV2 = () => {
   };
 
   return (
-    <>{theme}
+
     <div className="theme-toggle">
       <input
         type="checkbox"
@@ -42,7 +42,7 @@ const ThemeSwitcherV2 = () => {
         )}
       </label>
     </div>
-    </>
+
   );
 };
 

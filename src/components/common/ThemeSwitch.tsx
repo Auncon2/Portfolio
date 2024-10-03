@@ -1,25 +1,51 @@
+
+"use client";
 import { Switch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
-import { MoonIcon } from "./SunAndMoonIcon";
 import { LuSunMedium } from "react-icons/lu";
 import { FiMoon } from "react-icons/fi";
+import { useEffect, useState } from "react";
 
 const ThemeSwitch = () => {
-    const { theme, setTheme } = useTheme();
-  return ( 
+  const { resolvedTheme, setTheme } = useTheme();
+  const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Ensure that the component is mounted before rendering the UI to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    setIsDark(resolvedTheme === "dark");
+  }, [resolvedTheme]);
+
+  const handleThemeToggle = () => {
+    setTheme(isDark ? "light" : "dark");
+  };
+
+  // If the component is not mounted yet, return null (don't render the Switch)
+  if (!mounted) {
+    return null;
+  }
+
+  return (
     <Switch
-      defaultSelected
+    className={isDark ?  "bg-dark" : "bg-light" }
+      isSelected={isDark}
       size="lg"
       color="secondary"
-   
-      thumbIcon={({ isSelected, className }) =>
-        isSelected ? (
-          <LuSunMedium  color="black" onClick={() => setTheme("light")}/>
-        ) : (
-          <FiMoon color="black"   onClick={() => setTheme("dark")}/>
-        )
+      onChange={() => {
+        handleThemeToggle();
+        setIsDark(!isDark);
+      }}
+      thumbIcon={({ isSelected }) =>
+        isSelected ? 
+        <FiMoon color="white" />
+       : 
+        <LuSunMedium color="white" /> 
       }
-    ></Switch>
+    />
   );
 };
 

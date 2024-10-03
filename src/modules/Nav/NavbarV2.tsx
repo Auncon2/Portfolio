@@ -1,11 +1,14 @@
 "use client"
+import ThemeSwitch from "@/components/common/ThemeSwitch";
 import { ModeToggle } from "@/components/ui/ModeToggle";
+import { useTheme } from "next-themes";
 
 import Link from "next/link";
 
 
 
 const NavbarV2 = () => {
+  const { theme, setTheme } = useTheme();
   return (
     <div className="flex justify-between p-4 px-14 bg-transparent fixed top-0 left-0 w-full backdrop-blur-xl z-50">
       <Link
@@ -36,8 +39,8 @@ const NavbarV2 = () => {
         </Link>
       </div>
 
-      <ModeToggle />
-   
+      {/* <ModeToggle /> */}
+   <ThemeSwitch/>
     </div>
   );
 };
